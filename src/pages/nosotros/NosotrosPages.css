@@ -1,0 +1,421 @@
+/* src/pages/nosotros/NosotrosPages.css */
+
+/* =====================================================
+   1. PÁGINA
+   ===================================================== */
+.nosotros-page {
+  min-height: 100vh;
+  background: #0d0d0d;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* =====================================================
+   2. CONTENIDO
+   ===================================================== */
+.nosotros-contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 5% 120px;
+  position: relative;
+}
+
+/* Grid de fondo */
+.nosotros-contenido::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* =====================================================
+   3. LABEL REUTILIZABLE
+   ===================================================== */
+.nosotros-header-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 14px;
+}
+
+.nosotros-header-label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: #FF3B3B;
+  flex-shrink: 0;
+}
+
+.nosotros-header-label.light {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =====================================================
+   4. HEADER
+   ===================================================== */
+.nosotros-header {
+  text-align: center;
+  margin-bottom: 96px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(56px, 8vw, 100px);
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #ffffff;
+  line-height: 0.95;
+  margin: 0 0 20px;
+}
+
+.nosotros-titulo em {
+  font-style: normal;
+  color: #FF3B3B;
+}
+
+.nosotros-subtitulo {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   5. SECCIÓN HISTORIA
+   ===================================================== */
+.nosotros-seccion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 112px;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-texto-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 16px;
+}
+
+.nosotros-texto-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #FF3B3B;
+}
+
+.nosotros-texto h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+.nosotros-texto h2 em {
+  font-style: normal;
+  color: #FF3B3B;
+}
+
+.nosotros-texto p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 18px;
+}
+
+.nosotros-texto p:last-child {
+  margin-bottom: 0;
+}
+
+/* Imagen */
+.nosotros-imagen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nosotros-imagen-glow {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(68, 226, 209, 0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.nosotros-imagen img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================================================
+   6. VALORES
+   ===================================================== */
+.nosotros-valores {
+  margin-bottom: 112px;
+  position: relative;
+  z-index: 1;
+}
+
+.nosotros-valores-header {
+  text-align: center;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros-valores h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.nosotros-valores h2 em {
+  font-style: normal;
+  color: #FF3B3B;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.valor-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 36px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s;
+}
+
+/* Línea roja inferior al hover */
+.valor-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FF3B3B, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.valor-item:hover {
+  border-color: rgba(255, 59, 59, 0.3);
+  background: rgba(255, 59, 59, 0.03);
+  transform: translateY(-4px);
+}
+
+.valor-item:hover::after {
+  opacity: 1;
+}
+
+.valor-icon {
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.valor-item h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
+
+.valor-item p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.65;
+}
+
+/* =====================================================
+   7. CTA
+   ===================================================== */
+.nosotros-cta {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nosotros-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 50%, rgba(255, 59, 59, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.nosotros-cta-inner {
+  text-align: center;
+  padding: 80px 60px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros-cta h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.nosotros-cta h2 em {
+  font-style: normal;
+  color: #FF3B3B;
+}
+
+.nosotros-cta p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 40px;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+.nosotros-boton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FF3B3B;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nosotros-boton svg {
+  width: 16px;
+  height: 16px;
+  stroke: #fff;
+  transition: transform 0.2s;
+}
+
+.nosotros-boton:hover {
+  background: #e02929;
+  transform: translateY(-2px);
+}
+
+.nosotros-boton:hover svg {
+  transform: translateX(4px);
+}
+
+/* =====================================================
+   8. RESPONSIVE
+   ===================================================== */
+@media (max-width: 1024px) {
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-contenido {
+    padding: 60px 4% 80px;
+  }
+
+  .nosotros-header {
+    margin-bottom: 64px;
+  }
+
+  .nosotros-seccion {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 80px;
+  }
+
+  .nosotros-imagen {
+    order: -1;
+  }
+
+  .nosotros-imagen-glow {
+    width: 240px;
+    height: 240px;
+  }
+
+  .nosotros-cta-inner {
+    padding: 56px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nosotros-contenido {
+    padding: 48px 4% 64px;
+  }
+
+  .nosotros-header {
+    margin-bottom: 48px;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .valor-item {
+    padding: 28px 20px;
+  }
+
+  .nosotros-cta-inner {
+    padding: 48px 24px;
+  }
+}

@@ -1,0 +1,117 @@
+/* =====================================================
+   FOOTER - Estilo Premium
+   ===================================================== */
+
+.footer-principal {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 80px 5% 40px;
+  position: relative;
+}
+
+.footer-contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+/* ==================== COLUMNA MARCA ==================== */
+.footer-columna.marca .footer-logo {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #FF3B3B;
+  margin-bottom: 12px;
+}
+
+.footer-columna.marca .footer-logo span {
+  color: #ffffff;
+}
+
+.footer-descripcion {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* ==================== TÍTULOS DE COLUMNA ==================== */
+.footer-titulo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ==================== LISTAS ==================== */
+.footer-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-lista li {
+  margin-bottom: 12px;
+}
+
+.footer-lista a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-lista a:hover {
+  color: #FF3B3B;
+  padding-left: 4px;
+}
+
+/* ==================== REDES SOCIALES ==================== */
+.footer-redes {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-redes a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.footer-redes a:hover {
+  color: #FF3B3B;
+  transform: translateY(-3px);
+}
+
+/* ==================== COPYRIGHT ==================== */
+.footer-copyright {
+  margin-top: 80px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .footer-contenedor {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-contenedor {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-columna.marca {
+    text-align: center;
+  }
+  
+  .footer-descripcion {
+    margin: 0 auto;
+  }
+}

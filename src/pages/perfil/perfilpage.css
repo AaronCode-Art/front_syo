@@ -1,0 +1,204 @@
+/* =====================================================
+   PERFIL PAGE - Estilo premium oscuro
+   ===================================================== */
+
+.perfil-page {
+  background: #0a0a0a;
+  min-height: 100vh;
+  color: #ffffff;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Contenedor principal */
+.perfil-contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* Header del perfil */
+.perfil-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.perfil-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #FF3B3B, #44E2D1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.perfil-email {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* Tarjeta principal */
+.perfil-card {
+  background: #161616;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 59, 59, 0.1);
+}
+
+/* Información en modo vista */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #aaa;
+  font-size: 1.05rem;
+}
+
+.info-value {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+/* Formulario de edición */
+.perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.perfil-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.perfil-form input {
+  width: 100%;
+  padding: 14px 18px;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.perfil-form input:focus {
+  outline: none;
+  border-color: #FF3B3B;
+  box-shadow: 0 0 0 3px rgba(255, 59, 59, 0.2);
+}
+
+/* Botones de acciones */
+.perfil-acciones {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-guardar {
+  background: linear-gradient(135deg, #FF3B3B, #e02020);
+  color: white;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-editar:hover,
+.btn-guardar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(255, 59, 59, 0.4);
+}
+
+.btn-cancelar {
+  background: transparent;
+  color: #aaa;
+  border: 2px solid #444;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #222;
+  color: white;
+}
+
+.btn-eliminar {
+  background: transparent;
+  color: #FF3B3B;
+  border: 2px solid #FF3B3B;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-eliminar:hover {
+  background: rgba(255, 59, 59, 0.1);
+}
+
+/* Mensajes de éxito y error */
+.perfil-error {
+  background: rgba(255, 59, 59, 0.15);
+  color: #FF3B3B;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.perfil-success {
+  background: rgba(68, 226, 209, 0.15);
+  color: #44E2D1;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .perfil-contenedor {
+    padding: 20px 15px 60px;
+  }
+  
+  .perfil-card {
+    padding: 30px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-acciones {
+    flex-direction: column;
+  }
+}

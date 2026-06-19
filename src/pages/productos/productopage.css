@@ -1,0 +1,194 @@
+
+/* =====================================================
+   PRODUCTOS PAGE - Diseño Dark Moderno
+   ===================================================== */
+ 
+.productos-page {
+  background: #0d0d0d;
+  min-height: 100vh;
+  padding: 40px 5% 80px;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+ 
+/* Grid de fondo (igual que seccionproducto) */
+.productos-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+ 
+/* Header con título */
+.productos-header {
+  max-width: 1280px;
+  margin: 0 auto 40px;
+  position: relative;
+  z-index: 1;
+}
+ 
+.productos-titulo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #ffffff;
+}
+ 
+/* =====================================================
+   BARRA DE FILTROS
+   ===================================================== */
+.filtros-container {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 22px 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: end;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+ 
+/* Cada grupo de filtro */
+.filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  flex: 1;
+}
+ 
+.filtro-grupo label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+ 
+.filtro-grupo select,
+.filtro-grupo input {
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  background: rgba(0,0,0,0.35);
+  color: #ffffff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+ 
+.filtro-grupo select option {
+  background: #161616;
+  color: #ffffff;
+}
+ 
+.filtro-grupo input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+ 
+.filtro-grupo select:hover,
+.filtro-grupo input:hover {
+  border-color: rgba(255,255,255,0.2);
+}
+ 
+.filtro-grupo select:focus,
+.filtro-grupo input:focus {
+  outline: none;
+  border-color: #44E2D1;
+  background: rgba(68,226,209,0.06);
+  box-shadow: 0 0 0 3px rgba(68,226,209,0.1);
+}
+ 
+/* Botón Limpiar filtros */
+.btn-limpiar {
+  height: 44px;
+  background: linear-gradient(135deg, #FF3B3B, #e02020);
+  color: white;
+  border: none;
+  padding: 0 24px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.btn-limpiar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255,59,59,0.35);
+}
+ 
+.btn-limpiar:active {
+  transform: translateY(0);
+}
+ 
+/* Grid de productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Mensaje vacío */
+.productos-grid + p,
+.productos-page p.text-center {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,0.35);
+}
+ 
+/* Responsive */
+@media (max-width: 1024px) {
+  .filtros-container {
+    padding: 20px;
+    gap: 16px;
+  }
+}
+ 
+@media (max-width: 768px) {
+  .filtros-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ 
+  .filtro-grupo {
+    min-width: 0;
+  }
+ 
+  .btn-limpiar {
+    width: 100%;
+  }
+ 
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+ 
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}

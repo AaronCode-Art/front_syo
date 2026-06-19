@@ -1,0 +1,115 @@
+/* src/components/ui/PageLoader.css */
+
+/* ===== CONTENEDOR FIJO ===== */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  z-index: 9999;
+}
+
+/* Grid de fondo */
+.page-loader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* ===== GLOW AMBIENT ===== */
+.loader-glow {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 59, 59, 0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ===== LOGO ===== */
+.loader-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  z-index: 1;
+  animation: loader-logo-in 0.5s ease both;
+}
+
+@keyframes loader-logo-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.loader-logo-mark {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 52px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.loader-logo-mark span {
+  color: #FF3B3B;
+}
+
+.loader-logo-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== BARRA DE PROGRESO ===== */
+.loader-bar-wrap {
+  width: 180px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 40%;
+  background: #FF3B3B;
+  border-radius: 2px;
+  animation: loader-bar-slide 1.4s ease-in-out infinite;
+}
+
+@keyframes loader-bar-slide {
+  0%   { transform: translateX(-100%); width: 40%; }
+  50%  { width: 60%; }
+  100% { transform: translateX(280%); width: 40%; }
+}
+
+/* ===== TEXTO ===== */
+.loader-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  animation: loader-blink 1.8s ease-in-out infinite;
+}
+
+@keyframes loader-blink {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 0.9; }
+}

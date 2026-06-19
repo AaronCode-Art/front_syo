@@ -1,0 +1,232 @@
+/* Variables de color */
+:root {
+  --primary-red: #FF3B3B;
+  --bg-dark: #0d0d0d;
+  --card-bg: rgba(255, 255, 255, 0.025);
+  --border-color: rgba(255, 255, 255, 0.08);
+}
+
+.cp-container {
+  background: var(--bg-dark);
+  font-family: 'DM Sans', sans-serif;
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Efecto de malla de fondo */
+.cp-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.cp-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* Tipografía */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 12px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--primary-red);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(60px, 10vw, 90px);
+  letter-spacing: 2px;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+.hero h1 em, .sec-title em {
+  font-style: normal;
+  color: var(--primary-red);
+}
+
+.sec-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 60px 0;
+}
+
+/* Grids e Info */
+.info-grid, .redes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.info-card, .red-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 30px 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.info-card:hover, .red-card:hover {
+  background: rgba(255, 59, 59, 0.04);
+  border-color: rgba(255, 59, 59, 0.3);
+  transform: translateY(-5px);
+}
+
+.ic-icon, .red-icon-wrap {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 59, 59, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-red);
+  margin-bottom: 20px;
+}
+
+.ic-link {
+  color: var(--primary-red);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+/* Horarios */
+.horario-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.badge-open {
+  color: #3ddc84;
+  background: rgba(61, 220, 132, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+/* Formulario */
+.form-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.form-info h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.resp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 59, 59, 0.1);
+  padding: 8px 16px;
+  border-radius: 30px;
+  color: var(--primary-red);
+  font-weight: 700;
+  font-size: 11px;
+  margin-top: 20px;
+}
+
+.resp-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--primary-red);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary-red);
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.fi {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: inherit;
+  width: 100%;
+}
+
+.fi:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+.submit-btn {
+  background: var(--primary-red);
+  color: #fff;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.02);
+  background: #e02929;
+}
