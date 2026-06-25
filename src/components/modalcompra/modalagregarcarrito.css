@@ -1,0 +1,114 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-carrito {
+  width: 420px;
+  max-width: 92%;
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 32px;
+  color: white;
+  text-align: center;
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.45);
+
+  animation: scaleIn 0.25s ease;
+}
+
+.modal-icono {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #22c55e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.modal-carrito h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.modal-carrito p {
+  margin-top: 16px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+}
+
+.modal-subtext {
+  display: block;
+  margin-top: 10px;
+  color: #ffb703;
+  font-size: 14px;
+}
+
+.modal-botones {
+  margin-top: 28px;
+  display: flex;
+  gap: 14px;
+}
+
+.modal-botones button {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-seguir {
+  background: #1f1f1f;
+  color: white;
+}
+
+.btn-seguir:hover {
+  transform: translateY(-2px);
+  background: #2c2c2c;
+}
+
+.btn-pagar {
+  background: #ffffff;
+  color: black;
+}
+
+.btn-pagar:hover {
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
